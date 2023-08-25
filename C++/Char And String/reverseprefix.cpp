@@ -2,10 +2,10 @@
 #include<cstring>
 using namespace std;
 
-void printAllPrefix(char str[]){
-    for (int i = 0; str[i]!='\0'; i++){
-        for(int j = 0;j<=i;j++){
-            cout<<str[j];
+void printReversePrefix(char a[]){
+    for(int i = strlen(a)-1;i>=0;i--){
+        for(int j = strlen(a)-1;j>=i;j-- ){
+            cout<<a[j];
         }
         cout<<endl;
     }
@@ -14,6 +14,6 @@ void printAllPrefix(char str[]){
 int main(){
     char str[]="abc";
     //print all prefix of string 
-    printAllPrefix(str);
+    printReversePrefix(str);
     return 0;
 }
